@@ -80,9 +80,10 @@ st.markdown("""
 
 st.title("🧹 Data sweeper")
 st.write("Transform your files between CSV and Excel formats with built-in data cleaning and visualization!")
+st.markdown("**Convert `.csv` to `.xlsx` && `.xlsx` to `.csv`**", unsafe_allow_html=True)
 
 uploaded_files = st.file_uploader("Upload your files (CSV or Excel):", type=["csv", "xlsx"], 
-                              accept_multiple_files=True)
+                            accept_multiple_files=True)
 
 if uploaded_files:
     for file in uploaded_files:
