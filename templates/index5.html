@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='dist/styles.css') }}">
+</head>
+<body class="flex flex-col items-center justify-center bg-gray-100 min-h-screen p-5">
+
+    <h1 class="text-center text-blue-600 font-bold text-3xl mb-5 underline ">
+        Welcome to My Website
+    </h1>
+    
+    <!-- Centered Image -->
+    <div class="flex justify-center items-center w-9/12">
+        <img 
+            src="{{ url_for('static', filename='garden1.jpg') }}" 
+            alt="A Sample Image" 
+            class="w-9/12 h-48 object-cover rounded-lg shadow-lg">
+    </div>
+
+    <br>
+
+    <!-- Centered Embedded YouTube Video -->
+    <div class="flex justify-center items-center mt-5">
+        <iframe 
+            width="850" 
+            height="350" 
+            src="https://www.youtube.com/embed/P6Sro9rMofg?si=1zoKyk8Bqdh9larO" title="YouTube video player" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+            class=" rounded-lg shadow-lg">
+        </iframe>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Webpage</title>
+    <!-- Link to the compiled TailwindCSS -->
+    <!-- <link href="{{ url_for('static', filename='static/src/styles.css') }}" rel="stylesheet"> -->
+    <link href="/static/dist/styles.css" rel="stylesheet">
+
+
+</head>
+<body class="bg-gray-900">
+    <header>
+        <h1 class= "animated-text text-green-500 font-bold text-4xl text-center mt-10">Welcome to My 1st Python Webpage</h1>
+    </header>
+    <main>
+        <p class="text-blue-500 font-bold text-2xl text-center mt-4">This page is styled using TailwindCSS!</p>
+        <p class="text-red-500 font-bold text-2xl text-center mt-4">Author: Azmat Ali</p>
+        <p class="animated-text text-yellow-300 font-bold text-2xl text-center mt-4">✨ Hover over me! ✨</p>
+    </main>
+    <!-- python app.py -->
+    <!-- npx tailwindcss -o static/dist/styles.css --watch -->
+     <!-- @keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animated-text {
+  animation: bounce 1s infinite;
+}
+
+.animated-text:hover {
+  animation: none; /* Stop animation on hover */
+  color: purple; /* Change color on hover */
+} -->
+</body>
+</html>
