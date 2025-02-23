@@ -136,7 +136,7 @@ st.markdown("""
         button {
             font-size: 1.5rem !important;
             padding: 8px 16px !important;
-            background-color: #262730 !important;
+            
         }
     }
     </style>
