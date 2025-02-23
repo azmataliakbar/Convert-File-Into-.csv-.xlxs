@@ -142,7 +142,7 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-
+st.title("🌱 Growth Mindset Challenge")
 st.title("🧹 Data sweeper")
 st.write("Transform your files between CSV and Excel formats with built-in data cleaning and visualization!")
 st.markdown("**Convert `.csv` to `.xlsx` && `.xlsx` to `.csv`**", unsafe_allow_html=True)
@@ -307,6 +307,8 @@ if uploaded_files:
             )
     
     st.success("✨ All files processed!")
+    st.write("*Built with ❤️ using Streamlit.*")
+    st.write("*✍️Prepared By: Azmat Ali*")
 
 
 
