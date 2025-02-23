@@ -49,6 +49,7 @@ st.markdown("""
     
     div[data-testid="stFileUploader"] section {
         color: #02f733 !important;
+        background-color: #262730 !important;
         border-radius: 10px !important;
         font-size: 2.0rem !important;
         font-weight: bold !important;
@@ -145,7 +146,7 @@ st.title("🧹 Data sweeper")
 st.write("Transform your files between CSV and Excel formats with built-in data cleaning and visualization!")
 st.markdown("**Convert `.csv` to `.xlsx` && `.xlsx` to `.csv`**", unsafe_allow_html=True)
 
-uploaded_files = st.file_uploader("Upload your files (CSV or Excel):", type=["csv", "xlsx"], 
+uploaded_files = st.file_uploader("Upload your files (CSV or Excel):", type=["csv", "xlsx"],
                             accept_multiple_files=True)
 
 if uploaded_files:
