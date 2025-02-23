@@ -12,74 +12,134 @@ from io import BytesIO
 st.set_page_config(page_title="🧹 Data sweeper", layout='wide')
 
 # Custom CSS to match the dark theme
+# Update the CSS section only - rest of the code remains the same
 st.markdown("""
     <style>
+    /* Global styles */
+    body {
+        background-color: #0E1117 !important;
+        color: white !important;
+    }
+    
+    .stApp {
+        background-color: #0E1117 !important;
+    }
+    
+    /* Main container */
     .main {
-        background-color:  #0E1117;
-        color: white;
+        background-color: #0E1117 !important;
+        color: white !important;
     }
-    .stButton button {
-        background-color: #262730;
-        color: blue;
-        border: 1px solid #4B4B4B;
-        border-radius: 4px;
-        padding: 0.5rem 1rem;
+    
+    /* Sidebar */
+    .css-1d391kg {
+        background-color: #262730 !important;
     }
-    .stButton button:hover {
-        background-color: #363940;
-        border-color: #565656;
+    
+    /* File uploader */
+    div[data-testid="stFileUploader"] {
+        background-color: #262730 !important;
+        color: white !important;
+        font-size: 2.0rem !important;
+        font-weight: bold !important;
+        border: 1px dashed #4B4B4B !important;
+        padding: 1rem !important;
+        border-radius: 10px !important;
     }
+    
     div[data-testid="stFileUploader"] section {
         color: #02f733 !important;
         border-radius: 10px !important;
         font-size: 2.0rem !important;
         font-weight: bold !important;
     }
-    .uploadedFile {
-        background-color: #1E1E1E;
-        padding: 1rem;
-        border: 1px solid gray;
-        border-radius: 10px;
-        margin-bottom: 1rem;
-        font-size: 2.0rem;
-        font-weight: bold;
+    
+    /* Buttons */
+    .stButton button {
+        background-color: #262730 !important;
+        color: blue !important;
+        border: 1px solid #4B4B4B !important;
+        border-radius: 4px !important;
+        padding: 0.5rem 1rem !important;
     }
+    
+    .stButton button:hover {
+        background-color: #363940 !important;
+        border-color: #565656 !important;
+    }
+    
+    button {
+        font-size: 2.0rem !important;
+        font-weight: bold !important;
+        padding: 12px 24px !important;
+    }
+    
+    /* File info box */
+    .uploadedFile {
+        background-color: #1E1E1E !important;
+        padding: 1rem !important;
+        border: 1px solid gray !important;
+        border-radius: 10px !important;
+        margin-bottom: 1rem !important;
+        font-size: 2.0rem !important;
+        font-weight: bold !important;
+    }
+    
     .uploadedFile h3 {
         color: #0CAFFF !important;
     }
+    
     .uploadedFile p {
         color: lightgreen !important;
     }
+    
+    /* DataFrame */
     .stDataFrame {
-        background-color: #262730;
+        background-color: #262730 !important;
     }
+    
+    /* Form elements */
     .stCheckbox label {
-        color: white;
+        color: white !important;
     }
+    
     .stRadio label {
-        color: white;
+        color: white !important;
     }
-    div[data-testid="stFileUploader"] {
-        background-color: #262730;
-        color: white;
-        font-size: 2.0rem;
-        font-weight: bold;
-        border: 1px dashed #4B4B4B;
-        padding: 1rem;
-        border-radius: 10px;
-    }
+    
+    /* Markdown text */
     div[data-testid="stMarkdownContainer"] {
-        color: orange;
-        font-size: 1.2rem;
-        font-weight: bold;
+        color: orange !important;
+        font-size: 1.2rem !important;
+        font-weight: bold !important;
     }
-    button {
-        font-size: 2.0rem !important;
-        font-weight: bold;
-        padding: 12px 24px !important;
+    
+    /* Mobile specific styles */
+    @media (max-width: 768px) {
+        .main {
+            background-color: #0E1117 !important;
+        }
+        
+        .stApp {
+            background-color: #0E1117 !important;
+        }
+        
+        div[data-testid="stFileUploader"] {
+            font-size: 1.5rem !important;
+        }
+        
+        .uploadedFile {
+            font-size: 1.5rem !important;
+        }
+        
+        button {
+            font-size: 1.5rem !important;
+            padding: 8px 16px !important;
+        }
     }
     </style>
 """, unsafe_allow_html=True)
+
 
 st.title("🧹 Data sweeper")
 st.write("Transform your files between CSV and Excel formats with built-in data cleaning and visualization!")
