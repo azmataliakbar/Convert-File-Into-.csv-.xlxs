@@ -1,9 +1,12 @@
 import streamlit as st
 import pandas as pd
-import plotly.graph_objects as go
+import plotly.graph_objects as go  # Correct import for graph_objects
+print("Plotly imported successfully!")
+import plotly.express as px        # Import plotly.express for convenience
 import os
 from io import BytesIO
-import plotly.express as px
+
+
 
 # Set up our App
 st.set_page_config(page_title="🧹 Data sweeper", layout='wide')
